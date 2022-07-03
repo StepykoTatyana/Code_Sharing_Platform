@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<form action="#" th:action="@{/code/new}" th:object="${snippets}" method="post">
+    <textarea name="code" id="code_snippet" cols="30" rows="10" placeholder="*{code}"></textarea><br />
+    <p>Time restriction: <input id="time_restriction" type="text" th:field="*{time}" /></p>
+    <p>Views restriction: <input id="views_restriction" type="text" th:field="*{views}" /></p>
+    <button id="send_snippet" type="submit" value="Submit" onclick="send()">Submit</button>
+</form><br>
+</body>
+</html>
